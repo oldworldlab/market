@@ -1,5 +1,5 @@
-import { AbyssDashboard } from "@/components/abyss-dashboard"
+import GamingDashboard from "@/components/gaming-dashboard"
 
 export default function DashboardPage() {
-  return <AbyssDashboard />
+  return <GamingDashboard />
 }
