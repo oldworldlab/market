@@ -12,9 +12,9 @@ export function SecretShopLayout({ children }: { children: React.ReactNode }) {
             <Image 
               src="/images/secret-shop-logo.png" 
               alt="Secret Shop Logo" 
-              width={40} 
-              height={40} 
-              className="rounded-full"
+              width={80} 
+              height={80} 
+              className="rounded-full glow-gold cursor-interactive"
             />
           </Link>
           <div className="flex-grow flex justify-center space-x-6">
@@ -26,25 +26,27 @@ export function SecretShopLayout({ children }: { children: React.ReactNode }) {
               { icon: Scroll, label: "Quests", href: "#" },
               { icon: User, label: "Profile", href: "/profile" },
             ].map(({ icon: Icon, label, href }) => (
-              <Link key={label} href={href} className="flex items-center text-sm text-gray-300 hover:text-white">
+              <Link key={label} href={href} className="flex items-center text-sm text-gray-300 hover:text-white glow-gold-hover interactive-button cursor-interactive">
                 <Icon className="w-4 h-4 mr-2" />
                 {label}
               </Link>
             ))}
           </div>
-          <Button className="bg-[#ffd700] text-black hover:bg-[#ffed4a] flex-shrink-0">Connect Wallet</Button>
+          <Button className="bg-[#ffd700] text-black hover:bg-[#ffed4a] flex-shrink-0 glow-gold interactive-button cursor-interactive">Connect Wallet</Button>
         </nav>
       </header>
 
-      {children}
+      <main className="flex-grow">
+        {children}
+      </main>
 
       <footer className="bg-[#1c2333] border-t border-[#30363d] py-6">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <p className="text-sm text-gray-400">&copy; 2023 Secret Shop. All rights reserved.</p>
           <div className="flex space-x-4">
-            <a href="#" className="text-sm text-gray-400 hover:text-white">Terms of Service</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white">Contact Us</a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white glow-gold-hover interactive-button cursor-interactive">Terms of Service</a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white glow-gold-hover interactive-button cursor-interactive">Privacy Policy</a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white glow-gold-hover interactive-button cursor-interactive">Contact Us</a>
           </div>
         </div>
       </footer>
